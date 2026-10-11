@@ -1,1 +1,2 @@
 # cash-flow-simulator
+- キャッシュフローシミュレーションのためのWebアプリケーション

@@ -1,0 +1,27 @@
+<!doctype html>
+<!--
+  PROTOTYPE — 使い捨てのモック。本実装（SvelteKit）には持ち込まない。
+  確かめたいこと：.scratch/cash-flow-simulator-v1/spec.md の画面の流れ
+    プラン一覧 → 10ステップの入力（左サイドバー） → キャッシュフロー表（折りたたみ・見出し固定・間引き表示・印刷）
+  入力画面だけ3つのレイアウトを ?variant=A|B|C で切り替えられる（画面下のバー、または ← → キー）
+    A: 1ステップ1画面（仕様どおり）
+    B: 全ステップを1ページに縦に並べる
+    C: 1ステップ1画面 ＋ 右側に表のライブプレビュー
+  計算は仕様を簡略化したもの。データは localStorage の PROTOTYPE_cashflow_plans に保存される（消してよい）。
+  起動：このファイルをブラウザで開くだけ。
+-->
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>キャッシュフローシミュレーター（モック）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="print-area"></div>
+  <div id="switcher" class="switcher" aria-label="プロトタイプのレイアウト切り替え"></div>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
